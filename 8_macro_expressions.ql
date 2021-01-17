@@ -12,5 +12,6 @@ class NtohMacrosCall extends MacroInvocation {
     }
 }
 
-from NtohMacrosCall nmc
-select nmc, nmc.getExpr()
+from NtohMacrosCall nmc, Expr expr
+where expr = nmc.getExpr()
+select nmc, expr.getFile(), expr
