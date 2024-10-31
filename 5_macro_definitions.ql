@@ -1,5 +1,5 @@
 import cpp
 
 from Macro macro
-where macro.getName() in ["ntohs", "ntohl", "ntohll"]
+where macro.getName().regexpMatch("ntoh(s|l|ll)")
 select macro
